@@ -55,8 +55,8 @@ https://github.com/jessfraz/dockerfiles
 - Antonio M
 - Camilo M
 - Christian B
-- Diego P
 - Devon P
+- Diego P
 - Mohammad B
 
 
