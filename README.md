@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
+## Terraformers - YCIT021 class
 
-You can use the [editor on GitHub](https://github.com/Vidinci/vidinci.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![Logo](https://vidinci.github.io/favicon.png)
 
 # Tools
 
@@ -29,21 +27,22 @@ This should be installed where you run Linux (inside your WSL Ubuntu VM).
 
 ## Helpful scripts
 See the **scripts** directory inside the **ycit-team-terraformers-dotfiles** repository for some helpful scripts.
+
 - [backup_wsl.bash](https://github.com/ycit-team-terraformers/ycit-team-terraformers-dotfiles/blob/main/scripts/backup_wsl.bash): Can be used to configure a backup of your HOME inside the WSL virtual machine, to a location on your physical host PC (including OneDrive, which may serve as a quick disaster recovery method).
 
 # Resource Center
 
-### docker Sample application
-https://docs.docker.com/get-started/02_our_app/
+### [docker Sample application]
+(https://docs.docker.com/get-started/02_our_app/)
 
-### Best practices for writing Dockerfile
-https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+### [Best practices for writing Dockerfile]
+(https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
-### Configure GitHub actions
-https://docs.docker.com/ci-cd/github-actions/
+### [Configure GitHub actions]
+(https://docs.docker.com/ci-cd/github-actions/)
 
-### Docker file library
-https://github.com/jessfraz/dockerfiles
+### [Docker file library]
+(https://github.com/jessfraz/dockerfiles)
 
 # Projects
 
@@ -60,6 +59,13 @@ https://github.com/jessfraz/dockerfiles
 - Mohammad B
 
 
+## Welcome to GitHub Pages
+
+You can use the [editor on GitHub](https://github.com/Vidinci/vidinci.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+
 ### Markdown Reference
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
@@ -70,8 +76,8 @@ Syntax highlighted code block
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
-```
 
+```
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
