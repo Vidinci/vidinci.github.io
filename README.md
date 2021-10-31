@@ -1,6 +1,6 @@
 ## Terraformers - YCIT021 class
 
-![Logo](https://vidinci.github.io/favicon.png)
+![Logo](https://ycit-team-terraformers.github.io/favicon.png)
 
 # Tools
 
@@ -11,6 +11,7 @@ Here is the minimum recommended software you'll need to interface with the produ
 This should be installed on your Windows workstation for maximum compatibility with Linux tooling and scripts. 
 If you can't install software on your workstation (corporate or otherwise controlled environment), one possible substitute is [Google Cloud Shell](https://cloud.google.com/shell), though you should be aware that you may run into limitations in the Cloud Shell environment.
 - [Windows Subsystem for Linux (WSL) with Ubuntu Linux](https://ubuntu.com/wsl)
+- [Minikube](https://minikube.sigs.k8s.io/docs/start/)
 - [Microsoft Visual Studio Code](https://code.visualstudio.com/download)
 - [Tutorial: Get started using Visual Studio Code with Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-vscode)
 
@@ -25,6 +26,94 @@ This should be installed where you run Linux (inside your WSL Ubuntu VM).
 
 # Configuration
 
+## Install WSL
+
+There are two ways to have WSL installed on Windows, it depends on the Windows version. 
+
+### Windows 10 version 2004 or higher
+
+Prerequisites: 
+You must be running Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11
+
+**Install**
+You can now install everything you need to run Windows Subsystem for Linux (WSL) by entering this command in PowerShell or Windows Command Prompt and then restarting your machine.
+
+```
+wsl --install
+```
+
+This command will enable the required optional components, download the latest Linux kernel, set WSL 2 as your default, and install a Linux distribution for you (Ubuntu by default, see below to change this).
+*The first time you launch a newly installed Linux distribution, a console window will open and you'll be asked to wait for files to de-compress and be stored on your machine. All future launches should take less than a second.*
+
+### WSL manual installation steps for older Windows versions 
+
+Open PowerShell as Administrator and run the following commands
+
+1. Enable WSL feature
+
+```
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
+
+2. Enabled Virtual machine
+
+```
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
+3. Restart the machine
+
+4. Download WSL 
+
+```
+https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+```
+
+5. Run the WSL installer
+
+6. Set WSL as 2 by default
+
+```
+wsl --set-default-version 2
+```
+
+7. Check distro installed 
+
+```
+wsl --list --verbose
+```
+
+## Install Linux distribution Ubuntu 20.01 LTS 
+
+Download Ubuntu
+```
+invoke-webrequest -outfile "$home\downloads\ubuntu_20_04.appx" -uri https://aka.ms/wslubuntu2004
+```
+Install downloaded package
+
+```
+add-appxpackage "$home\downloads\ubuntu_20_04.appx"
+```
+
+*The first time you launch a newly installed Linux distribution, a console window will open and you'll be asked to wait for files to de-compress and be stored on your machine.*
+*All future launches should take less than a second.*
+
+## Run the Distribution and create the user.
+
+Run the following command from PowerShell or Windows Terminal
+
+```
+ubuntu2004.exe
+```
+
+## exit the linux distribution
+
+Type exit
+
+```
+exit
+```
+
 ## Helpful scripts
 See the **scripts** directory inside the **ycit-team-terraformers-dotfiles** repository for some helpful scripts.
 
@@ -32,17 +121,13 @@ See the **scripts** directory inside the **ycit-team-terraformers-dotfiles** rep
 
 # Resource Center
 
-### [docker Sample application]
-(https://docs.docker.com/get-started/02_our_app/)
+- [Docker Sample application](https://docs.docker.com/get-started/02_our_app/)
 
-### [Best practices for writing Dockerfile]
-(https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+- [Best practices for writing Dockerfile](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
-### [Configure GitHub actions]
-(https://docs.docker.com/ci-cd/github-actions/)
+- [Configure GitHub actions](https://docs.docker.com/ci-cd/github-actions/)
 
-### [Docker file library]
-(https://github.com/jessfraz/dockerfiles)
+- [Docker file library](https://github.com/jessfraz/dockerfiles)
 
 # Projects
 
@@ -59,31 +144,8 @@ See the **scripts** directory inside the **ycit-team-terraformers-dotfiles** rep
 - Mohammad B
 
 
-## Welcome to GitHub Pages
+## About GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/Vidinci/vidinci.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-
-### Markdown Reference
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-
-```
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Vidinci/vidinci.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
