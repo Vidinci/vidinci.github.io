@@ -2,6 +2,8 @@
 
 ![Logo](https://ycit-team-terraformers.github.io/favicon.png)
 
+[Terraformers' Landing page](https://ycit-team-terraformers.github.io/)
+
 # Tools
 
 ## Required Software
@@ -88,7 +90,7 @@ wsl --set-default-version 2
 wsl --list --verbose
 ```
 
-## Install Linux distribution Ubuntu 20.01 LTS 
+## Install Linux distribution Ubuntu 20.04 LTS 
 
 Download Ubuntu
 ```
